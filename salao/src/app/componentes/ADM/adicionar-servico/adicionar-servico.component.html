@@ -1,29 +1,36 @@
-<div>
+<div class="conteudo">
+
     <!-- <h1>{{servico.id = "" ? "Cadastrar serviço" : "Editar serviço"}}</h1> -->
 
     <form action="" method="post">
-        <label for="">Serviço: </label>
-        <input type="text" id="nome-servico" placeholder="o nome do serviço">
+        <label for="nome-servico">Serviço     
+        </label>
+            <input type="text" id="nome-servico" placeholder="o nome do serviço">
 
-        <label for="">Tipo: </label>
-        <select name="" id="">
-            <option value=0 >escolha</option>
-            <option value="">Unhas</option>
-            <option value="">Cabelo</option>
-            <option value="">depilação</option>
-            <option value="">rosto</option>
-        </select>
+        <label for="type-service">Tipo 
+        </label>
+            <select name="" id="type-service">
+                <option value=0 >escolha</option>
+                <option value="">Unhas</option>
+                <option value="">Cabelo</option>
+                <option value="">depilação</option>
+                <option value="">rosto</option>
+            </select>
 
-        <label for="">Descrição: </label>
-        <textarea name="" id="" cols="25" rows="10">insira uma breve descrição</textarea>
+        <label for="">Descrição</label> 
+            <textarea name="" id="" cols="25" rows="10" placeholder="insira uma breve descrição"></textarea>
 
-        <label for="">Valor: </label>
-        <input type="text" placeholder="em R$">
+        <label for="">Valor 
+        </label>
+            <input type="text" placeholder="em R$">
 
-        <label for="">Escolha uma imagem</label>
-        <input type="file" >
+        <label for="">Escolha uma imagem
+        </label>
+            <input type="file" >
 
-        <button type="submit">Cadastrar</button>
-        <button>Voltar</button>
+        <div class="buttons">
+            <button type="submit">Cadastrar</button>
+            <button routerLink="/administracao" >Voltar</button>
+        </div>
     </form>
 </div>

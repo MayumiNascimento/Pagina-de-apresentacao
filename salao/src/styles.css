@@ -8,3 +8,10 @@ body{
     background-color: #FFDADA;
     font-family: 'Barlow', sans-serif;
 }
+
+.buttons button {
+    background-color: #D75581;
+    margin: 6px;
+    padding: 8px;
+    border-radius: 6px;
+}

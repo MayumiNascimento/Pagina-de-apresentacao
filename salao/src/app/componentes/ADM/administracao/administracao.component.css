@@ -1,0 +1,29 @@
+
+.full-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.full-content h1 {
+
+}
+
+table{
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td{
+    padding: 8px;
+    /* border-bottom: 1px solid #E3B2B2; */
+    text-aling: left;
+}
+tr:nth-child(even) {
+    background-color: #FFCCCC;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}

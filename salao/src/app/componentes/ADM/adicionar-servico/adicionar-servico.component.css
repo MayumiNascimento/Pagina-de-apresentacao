@@ -1,0 +1,20 @@
+.conteudo form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo label {
+    padding: 4px;
+    align-text: left;
+}
+
+.conteudo input[type="text"], select{
+    height: 20px;
+    width: 25%;
+    border-radius: 6px;
+}
+
+.conteudo textarea {
+    border-radius: 6px;
+}
