@@ -2,35 +2,40 @@
 
     <!-- <h1>{{servico.id = "" ? "Cadastrar serviço" : "Editar serviço"}}</h1> -->
 
-    <form action="" method="post">
-        <label for="nome-servico">Serviço     
-        </label>
-            <input type="text" id="nome-servico" placeholder="o nome do serviço">
+    <div class="Center">
 
-        <label for="type-service">Tipo 
+        <form action="" method="post" class="formStyle">
+            <label for="nome-servico">Serviço <br>    
+            <input type="text" id="nome-servico" placeholder="o nome do serviço">
         </label>
+        
+        <label for="type-service">Tipo <br>
             <select name="" id="type-service">
                 <option value=0 >escolha</option>
                 <option value="">Unhas</option>
                 <option value="">Cabelo</option>
-                <option value="">depilação</option>
-                <option value="">rosto</option>
+                <option value="">Depilação</option>
+                <option value="">Rosto</option>
             </select>
-
-        <label for="">Descrição</label> 
+        </label>
+        
+        <label for="">Descrição <br>
             <textarea name="" id="" cols="25" rows="10" placeholder="insira uma breve descrição"></textarea>
-
-        <label for="">Valor 
-        </label>
+        </label> 
+        
+        
+        <label for="">Valor <br>
             <input type="text" placeholder="em R$">
-
-        <label for="">Escolha uma imagem
         </label>
-            <input type="file" >
 
+        <label for="">Escolha uma imagem <br>
+            <input type="file" >
+        </label>
+        
         <div class="buttons">
-            <button type="submit">Cadastrar</button>
+            <button>Cadastrar</button>
             <button routerLink="/administracao" >Voltar</button>
         </div>
     </form>
+</div>
 </div>
