@@ -7,21 +7,26 @@
         <button ng-click="vm.prevCard()" class="slider-button"><<</button>
         <button ng-click="vm.nextCard()" class="slider-button">>></button>
     </div> <br>
-    <!-- <div class="secao" ng-controller="CardSliderController as vm">
-        <div class="cardSlider">
-            <div class="card-container">
+            <div class="secao" *ngIf="listServices.length > 0">
+                <div class="" *ngFor="let servicos of listServices">
+                    <div class="card-container">
 
-                <div class="card" ng-repeat="card in vm.cards">
-                     <h3>{{card.title}}</h3>
-                    <p>{{card.body}}</p> 
-                    <a href="https://wa.me/+559282466395">    
-                        <button type="submit" class="btnAgendar">Agendar</button>
-                    </a>
+                        <!-- dados da API -->
+                        <!-- <div class="card" >
+                            <h3>{{servicos.nome}}</h3>
+                            <img src={servicos.imagem} alt="">
+                            <p>{{servicos.descricao}}</p>
+                            <h3>{{servicos.preco}}</h3>
+                           
+                            <a href="https://wa.me/+559282466395">    
+                                <button type="submit" class="btnAgendar">Agendar</button>
+                            </a>
+                        </div> -->
+
+                    </div>
                 </div>
-            </div>
-        </div>
-           
-    </div><br> -->
+                
+            </div><br>
 
     <h2>Unhas</h2>
     <div class="btnsNav">

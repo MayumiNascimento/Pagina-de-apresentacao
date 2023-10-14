@@ -1,7 +1,7 @@
-
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpParams } from '@angular/common/http';
-import { Services } from "./services";
+import { Servicos } from "./services";
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -10,22 +10,22 @@ import { Services } from "./services";
 export class ServicesService {
 
     constructor( private http: HttpClient){ }
-    baseUrl: string = "https://localhost:000"
+    private readonly baseUrl = "http://localhost:8000/api/servicos";
 
-    getServices(){
-        return this.http.get<Services>(this.baseUrl+'exemple'); //alterar para a devida rota, quando criada
+    getServices(): Observable<Servicos[]>{
+        return this.http.get<Servicos[]>(this.baseUrl); 
     }
 
-    getSingleService(id: any){
-        return this.http.get<Services>(this.baseUrl+'exemple'+ id );
+    getSingleService(tipo: any){
+        return this.http.get<Servicos>(this.baseUrl+ tipo );
     }
 
-    CreateServices(Services: any){
-        return this.http.post(this.baseUrl+'exemple', Services)
+    CreateServices(servicos: Servicos): Observable<Servicos>{
+        return this.http.post<Servicos>(this.baseUrl+"/novo", servicos)
     }
 
-    EditServices(Services: any){
-        return this.http.put(this.baseUrl+'exemple', Services)
+    EditServices(Servicos: any){
+        return this.http.put(this.baseUrl+'exemple', Servicos)
 
     }
 

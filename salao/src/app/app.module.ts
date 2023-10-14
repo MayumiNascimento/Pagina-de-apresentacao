@@ -9,6 +9,8 @@ import { ApresentacaoComponent } from './componentes/apresentacao/apresentacao.c
 import { AdministracaoComponent } from './componentes/ADM/administracao/administracao.component';
 import { AdicionarServicoComponent } from './componentes/ADM/adicionar-servico/adicionar-servico.component';
 import { EditarServicoComponent } from './componentes/ADM/editar-servico/editar-servico.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { EditarServicoComponent } from './componentes/ADM/editar-servico/editar-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

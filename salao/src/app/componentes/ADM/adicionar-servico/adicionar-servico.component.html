@@ -1,15 +1,23 @@
 <div class="conteudo">
 
-    <!-- <h1>{{servico.id = "" ? "Cadastrar serviço" : "Editar serviço"}}</h1> -->
+    <!-- <h1>{{servicos.nome = undefined ? "Cadastrar serviço" : "Editar serviço"}}</h1> -->
 
     <div class="Center">
 
-        <form action="" method="post" class="formStyle">
-            <label for="nome-servico">Serviço <br>    
-            <input type="text" id="nome-servico" placeholder="o nome do serviço">
-        </label>
+        <form class="formStyle">
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" name="tipo" [(ngModel)]="servicos.tipo">
+            <br>
         
-        <label for="type-service">Tipo <br>
+            <label for="nome">Serviço <br>    
+            <input type="text" 
+                   id="nome" 
+                   name="nome" 
+                   placeholder="o nome do serviço"
+                   [(ngModel)]="servicos.nome">
+            </label>
+            <br>
+        <!-- <label for="type-service">Tipo <br>
             <select name="" id="type-service">
                 <option value=0 >escolha</option>
                 <option value="">Unhas</option>
@@ -17,23 +25,34 @@
                 <option value="">Depilação</option>
                 <option value="">Rosto</option>
             </select>
+        </label> -->
+        
+        <label for="descricao">Descrição <br>
+            <textarea name="descricao" 
+                      id="descricao" 
+                      cols="27" rows="10" 
+                      placeholder="insira uma breve descrição"
+                      [(ngModel)]="servicos.descricao">
+                      ></textarea>
         </label>
-        
-        <label for="">Descrição <br>
-            <textarea name="" id="" cols="25" rows="10" placeholder="insira uma breve descrição"></textarea>
-        </label> 
-        
-        
-        <label for="">Valor <br>
-            <input type="text" placeholder="em R$">
-        </label>
+        <br>
 
-        <label for="">Escolha uma imagem <br>
-            <input type="file" >
+        <label for="imagem">Escolha uma imagem <br>
+            <input type="file" [(ngModel)]="servicos.imagem"> 
         </label>
+        <br>
+        
+        <label for="preco">Valor <br>
+            <input type="text"
+                   name="preco"
+                   id="preco"
+                   placeholder="em R$"
+                   [(ngModel)]="servicos.preco">
+        </label>
+        <br>
         
         <div class="buttons">
-            <button>Cadastrar</button>
+            <button (click)="criarServico()">Cadastrar</button>
             <button routerLink="/administracao" >Voltar</button>
         </div>
     </form>

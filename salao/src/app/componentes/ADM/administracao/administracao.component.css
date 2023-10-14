@@ -11,12 +11,17 @@ table{
     border-collapse: collapse;
     width: 80%;
 }
-
-th, td{
+th {
+    text-align: left;
     padding: 8px;
-    /* border-bottom: 1px solid #E3B2B2; */
-    text-aling: left;
 }
+
+td{
+    padding: 10px;
+    /* border-bottom: 1px solid #E3B2B2; */
+    
+}
+
 tr:nth-child(even) {
     background-color: #FFCCCC;
 }

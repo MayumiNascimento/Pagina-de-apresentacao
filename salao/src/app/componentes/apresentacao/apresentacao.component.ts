@@ -1,35 +1,24 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Servicos } from '../../services';
+import { ServicesService } from 'src/app/services.service';
 
 @Component({
   selector: 'app-apresentacao',
   templateUrl: './apresentacao.component.html',
   styleUrls: ['./apresentacao.component.css']
 })
-export class ApresentacaoComponent {
-  // private cards: any[] = [];
-  // private currentIdx = 0;
+export class ApresentacaoComponent implements OnInit {
 
-  // constructor( private $http: ng.IHttpService) {
-  //   this.loadCards();
-  // }
+    listServices: Servicos[] = [];
 
-  // private loadCards(){
-  //   this.$http.get('https://jsonplaceholder.typicode.com/posts')
-  //   .then((response: ng.IHttpResponse<any>) => {
-  //     this.cards = response.data.slice(0,3);
-  //   })
-  //   .catch((error: any) => {
-  //     console.error('erro em exibir', error)
-  //   });
-  // }
+    constructor(private services: ServicesService){}
 
-  // public PreviusCard(){
-  //   this.currentIdx = (this.currentIdx - 1 + this.cards.length) % this.cards.length
-  // }
+  ngOnInit(): void {
+    this.services.getServices().subscribe((listServices) => {
+        this.listServices = listServices;
+        console.log(listServices)
+    })
+  }
   
-  // public NextCard(){
-  //   this.currentIdx = (this.currentIdx + 1) % this.cards.length;
-  // }
-
 }
 

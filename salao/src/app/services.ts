@@ -1,9 +1,8 @@
-export class Services{
+export interface Servicos{
     id?: number;
-    name?: string;
-    type?: number;
-    description?: string;
-    value?: string;
-    image?: string;
-
+    nome?: string;
+    tipo?: string;
+    descricao?: string;
+    imagem?: string;
+    preco?: string;
 }

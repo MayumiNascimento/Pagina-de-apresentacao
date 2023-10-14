@@ -10,54 +10,17 @@
             <th></th>
         </thead>
 
-        <tbody>
+        <tbody *ngFor="let servico of listServices">
             <!-- inserir lógica para add dinamicamente -->
             <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td><3</td>
-                <td><3</td>
-                <!-- <td>{{servico.nome}}</td>
+                <td>{{servico.nome}}</td>
                 <td>{{servico.tipo}}</td>
                 <td>{{servico.descricao}}</td>
-                <td>{{servico.valor}}</td>
-                <td> <a href="edit/{{servico.id}}"></a>Editar</td>
-                <td><button (click)="delete_servico(servico)"></button>Deletar</td> -->
+                <td>R$ {{servico.preco}}</td>
+                <td> <a href="edit/{{servico.id}}"></a></td>
+                <!-- <td><button (click)="delete_servico(servico)"></button>Deletar</td> -->
             </tr>
-            <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td><3</td>
-                <td><3</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td><3</td>
-                <td><3</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td><3</td>
-                <td><3</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td><3</td>
-                <td><3</td>
-            </tr>
+            
         </tbody>
     </table> <br>
     <div class="buttons">

@@ -8,12 +8,12 @@
 .conteudo form{
     display: flex;
     flex-direction: column;
-    padding: 7px;
+    padding: 20px;
    
 }
 
 .conteudo label {
-    padding: 4px;
+
     display: block;
 }
 
@@ -21,6 +21,7 @@
     height: 20px;
     border-radius: 6px;
     width: 73%;
+    padding: 5px;
 }
 
 .conteudo textarea {
