@@ -9,10 +9,10 @@
     </div> <br>
             <div class="secao" *ngIf="listServices.length > 0">
                 <div class="" *ngFor="let servicos of listServices">
-                    <div class="card-container">
+                    <div class="card-container" *ngIf="servicos.tipo == 'Cabelo'">
 
                         <!-- dados da API -->
-                        <!-- <div class="card" >
+                        <div class="card" >
                             <h3>{{servicos.nome}}</h3>
                             <img src={servicos.imagem} alt="">
                             <p>{{servicos.descricao}}</p>
@@ -21,7 +21,7 @@
                             <a href="https://wa.me/+559282466395">    
                                 <button type="submit" class="btnAgendar">Agendar</button>
                             </a>
-                        </div> -->
+                        </div>
 
                     </div>
                 </div>
@@ -33,16 +33,23 @@
         <button ng-click="vm.prevCard()" class="slider-button"><<</button>
         <button ng-click="vm.nextCard()" class="slider-button">>></button>
     </div>
-    <div class="secao">
-        <div class="card">
-            <img src="../../../assets/imgs/unhas-decoradas.png" 
-            alt="fotografia de unhas pintadas e decorada">
-                <h3>Título</h3>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <h4 class="valorR$">Valor: 00 </h4>
-                <a href="https://wa.me/+559282466395">    
-                    <button type="submit" class="btnAgendar">Agendar</button>
-                </a>
+    <div class="secao" *ngIf="listServices.length > 0">
+        <div class="" *ngFor="let servicos of listServices">
+            <div class="card-container" *ngIf="servicos.tipo == 'Unhas'">
+
+                <!-- dados da API -->
+                <div class="card" >
+                    <h3>{{servicos.nome}}</h3>
+                    <img src={servicos.imagem} alt="">
+                    <p>{{servicos.descricao}}</p>
+                    <h3>{{servicos.preco}}</h3>
+                   
+                    <a href="https://wa.me/+559282466395">    
+                        <button type="submit" class="btnAgendar">Agendar</button>
+                    </a>
+                </div>
+
+            </div>
         </div>
 
     </div><br>
@@ -52,15 +59,23 @@
         <button ng-click="vm.prevCard()" class="slider-button"><<</button>
         <button ng-click="vm.nextCard()" class="slider-button">>></button>
     </div>
-    <div class="secao">
-        <div class="card">
-            <img src="" alt="">
-                <h3>Título</h3>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <h4 class="valorR$">Valor: 00 </h4>
-                <a href="https://wa.me/+559282466395">    
-                    <button type="submit" class="btnAgendar">Agendar</button>
-                </a>
+    <div class="secao" *ngIf="listServices.length > 0">
+        <div class="" *ngFor="let servicos of listServices">
+            <div class="card-container" *ngIf="servicos.tipo == 'Depilação'">
+
+                <!-- dados da API -->
+                <div class="card" >
+                    <h3>{{servicos.nome}}</h3>
+                    <img src={servicos.imagem} alt="">
+                    <p>{{servicos.descricao}}</p>
+                    <h3>{{servicos.preco}}</h3>
+                   
+                    <a href="https://wa.me/+559282466395">    
+                        <button type="submit" class="btnAgendar">Agendar</button>
+                    </a>
+                </div>
+
+            </div>
         </div>
 
     </div><br>
@@ -70,16 +85,23 @@
         <button ng-click="vm.prevCard()" class="slider-button"><<</button>
         <button ng-click="vm.nextCard()" class="slider-button">>></button>
     </div>
-    <div class="secao">
-        <div class="card">
-            <img src="../../../assets/imgs/make.png" 
-            alt="fotografia de uma mulher maquiada">
-                <h3>Título</h3>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-                <h4 class="valorR$">Valor: 00 </h4>
-                <a href="https://wa.me/+559282466395">    
-                    <button type="submit" class="btnAgendar">Agendar</button>
-                </a>
+    <div class="secao" *ngIf="listServices.length > 0">
+        <div class="" *ngFor="let servicos of listServices">
+            <div class="card-container" *ngIf="servicos.tipo == 'Rosto'">
+
+                <!-- dados da API -->
+                <div class="card" >
+                    <h3>{{servicos.nome}}</h3>
+                    <img src={servicos.imagem} alt="">
+                    <p>{{servicos.descricao}}</p>
+                    <h3>{{servicos.preco}}</h3>
+                   
+                    <a href="https://wa.me/+559282466395">    
+                        <button type="submit" class="btnAgendar">Agendar</button>
+                    </a>
+                </div>
+
+            </div>
         </div>
     </div>
     

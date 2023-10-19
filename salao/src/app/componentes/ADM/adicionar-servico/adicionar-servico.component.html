@@ -5,9 +5,9 @@
     <div class="Center">
 
         <form class="formStyle">
-            <label for="tipo">Tipo:</label>
+            <!-- <label for="tipo">Tipo:</label>
             <input type="text" id="tipo" name="tipo" [(ngModel)]="servicos.tipo">
-            <br>
+            <br> -->
         
             <label for="nome">Serviço <br>    
             <input type="text" 
@@ -17,15 +17,15 @@
                    [(ngModel)]="servicos.nome">
             </label>
             <br>
-        <!-- <label for="type-service">Tipo <br>
-            <select name="" id="type-service">
-                <option value=0 >escolha</option>
-                <option value="">Unhas</option>
-                <option value="">Cabelo</option>
-                <option value="">Depilação</option>
-                <option value="">Rosto</option>
+        <label for="tipo">Tipo <br>
+            <select name="tipo" id="tipo">
+                <option value="0" >escolha</option>
+                <option value="Unhas">Unhas</option>
+                <option value="Cabelo">Cabelo</option>
+                <option value="Depilação">Depilação</option>
+                <option value="Rosto">Rosto</option>
             </select>
-        </label> -->
+        </label>
         
         <label for="descricao">Descrição <br>
             <textarea name="descricao" 
@@ -37,20 +37,20 @@
         </label>
         <br>
 
+        
+        <label for="preco">Valor <br>
+            <input type="text"
+            name="preco"
+            id="preco"
+            placeholder="em R$"
+            [(ngModel)]="servicos.preco">
+        </label>
+        <br>
+        
         <label for="imagem">Escolha uma imagem <br>
             <input type="file" [(ngModel)]="servicos.imagem"> 
         </label>
         <br>
-        
-        <label for="preco">Valor <br>
-            <input type="text"
-                   name="preco"
-                   id="preco"
-                   placeholder="em R$"
-                   [(ngModel)]="servicos.preco">
-        </label>
-        <br>
-        
         <div class="buttons">
             <button (click)="criarServico()">Cadastrar</button>
             <button routerLink="/administracao" >Voltar</button>
