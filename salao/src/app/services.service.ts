@@ -20,7 +20,7 @@ export class ServicesService {
         return this.http.get<Servicos>(this.baseUrl+ tipo );
     }
 
-    CreateServices(servicos: Servicos): Observable<Servicos>{
+    CreateServices(servicos: Servicos, imagem: any): Observable<Servicos>{
         return this.http.post<Servicos>(this.baseUrl+"/novo", servicos)
     }
 

@@ -4,7 +4,7 @@
 
     <div class="Center">
 
-        <form class="formStyle">
+        <form class="formStyle" enctype="multipart/form-data">
             <!-- <label for="tipo">Tipo:</label>
             <input type="text" id="tipo" name="tipo" [(ngModel)]="servicos.tipo">
             <br> -->
@@ -18,7 +18,7 @@
             </label>
             <br>
         <label for="tipo">Tipo <br>
-            <select name="tipo" id="tipo">
+            <select name="tipo" id="tipo" [(ngModel)]="servicos.tipo">
                 <option value="0" >escolha</option>
                 <option value="Unhas">Unhas</option>
                 <option value="Cabelo">Cabelo</option>
@@ -26,14 +26,15 @@
                 <option value="Rosto">Rosto</option>
             </select>
         </label>
+        <br>
         
         <label for="descricao">Descrição <br>
             <textarea name="descricao" 
-                      id="descricao" 
-                      cols="27" rows="10" 
-                      placeholder="insira uma breve descrição"
-                      [(ngModel)]="servicos.descricao">
-                      ></textarea>
+                id="descricao" 
+                cols="27" rows="10" 
+                placeholder="insira uma breve descrição"
+                [(ngModel)]="servicos.descricao">
+                ></textarea>
         </label>
         <br>
 
@@ -48,11 +49,11 @@
         <br>
         
         <label for="imagem">Escolha uma imagem <br>
-            <input type="file" [(ngModel)]="servicos.imagem"> 
+            <input type="file" (change)="onFileSelected($event)" [(ngModel)]="servicos.imagem"> 
         </label>
         <br>
         <div class="buttons">
-            <button (click)="criarServico()">Cadastrar</button>
+            <button (click)="upload()">Cadastrar</button>
             <button routerLink="/administracao" >Voltar</button>
         </div>
     </form>

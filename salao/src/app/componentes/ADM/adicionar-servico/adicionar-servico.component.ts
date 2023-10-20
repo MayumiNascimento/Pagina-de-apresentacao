@@ -24,11 +24,24 @@ export class AdicionarServicoComponent implements OnInit {
   ngOnInit(): void {
     
   }
+  
+  selectedImage: undefined;
 
-  criarServico(){
-    this.servico.CreateServices(this.servicos).subscribe(() => {
-      // this.router.navigate(['./administracao']);
-    })
+  onFileSelected(event: any) {
+  this.selectedImage = event.target.files[0];
   }
+
+  upload(){
+    if(!this.selectedImage){
+      alert("Selecione uma imagem");
+      return
+    }
+    const formData = new FormData();
+    formData.append('imagem', this.selectedImage);
+    
+    this.servico.CreateServices(this.servicos, formData).subscribe(() => {
+      this.router.navigate(['./administracao']);
+    })
+  } 
 
 }

@@ -17,10 +17,17 @@
     display: block;
 }
 
-.conteudo input[type="text"], select{
+.conteudo input[type="text"]{
     height: 20px;
     border-radius: 6px;
     width: 73%;
+    padding: 5px;
+}
+
+.conteudo select{
+    height: 28px;
+    border-radius: 6px;
+    width: 78%;
     padding: 5px;
 }
 
