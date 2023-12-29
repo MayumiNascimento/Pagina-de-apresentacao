@@ -3,12 +3,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #73370D;
 }
+
 
 .secao{
     display: flex;
     flex-direction: row;
     margin: 0px 5px;
+    width:80%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(184,175,184,1);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(184,175,184,1);
+    box-shadow: 0px 3px 5px 0px rgba(184,175,184,1);
 }
 
 .card{
@@ -16,10 +28,10 @@
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    border: solid #EBC181 2px;
+    border: solid #8B4513 2px;
     overflow: hidden;
     margin: 10px;
-    width: 300px;
+    width: 280px;
     height: auto;
 }
 
@@ -35,7 +47,7 @@
 }
 
 .btnAgendar {
-    background-color: #FBAB44;
+    background-color: green;
     color: #FFFF;
     border-radius: 5px;
     padding: 05px;
