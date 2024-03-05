@@ -9,7 +9,7 @@
                     <!-- dados da API -->
                     <div class="card" >
                         <h3>{{servicos.nome}}</h3>
-                        <img src={servicos.imagem} alt="">
+                        <img [src]="getImage(servicos.imagem)" alt="Imagem do serviço">
                         <p>{{servicos.descricao}}</p>
                         <h3>{{servicos.preco}}</h3>
                         
@@ -31,7 +31,7 @@
                 <!-- dados da API -->
                 <div class="card" >
                     <h3>{{servicos.nome}}</h3>
-                    <img src={servicos.imagem} alt="">
+                    <img [src]="getImage(servicos.imagem)" alt="">
                     <p>{{servicos.descricao}}</p>
                     <h3>{{servicos.preco}}</h3>
                    
@@ -54,7 +54,7 @@
                 <!-- dados da API -->
                 <div class="card" >
                     <h3>{{servicos.nome}}</h3>
-                    <img src={servicos.imagem} alt="">
+                    <img [src]="getImage(servicos.imagem)" alt="">
                     <p>{{servicos.descricao}}</p>
                     <h3>{{servicos.preco}}</h3>
                    
@@ -77,7 +77,7 @@
                 <!-- dados da API -->
                 <div class="card" >
                     <h3>{{servicos.nome}}</h3>
-                    <img src={servicos.imagem} alt="">
+                    <img [src]="getImage(servicos.imagem)" alt="">
                     <p>{{servicos.descricao}}</p>
                     <h3>{{servicos.preco}}</h3>
                    

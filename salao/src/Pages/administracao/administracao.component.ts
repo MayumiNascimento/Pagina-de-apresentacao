@@ -15,7 +15,6 @@ export class AdministracaoComponent {
       ngOnInit(): void {
         this.services.getServices().subscribe((listServices) => {
             this.listServices = listServices;
-            console.log(listServices)
         })
     }
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApresentacaoComponent } from './componentes/apresentacao/apresentacao.component';
-import { AdministracaoComponent } from './componentes/ADM/administracao/administracao.component';
+import { ApresentacaoComponent } from '../Pages/apresentacao/apresentacao.component';
+import { AdministracaoComponent } from '../Pages/administracao/administracao.component';
 import { EditarServicoComponent } from './componentes/ADM/editar-servico/editar-servico.component';
 import { AdicionarServicoComponent } from './componentes/ADM/adicionar-servico/adicionar-servico.component';
 
@@ -13,7 +13,7 @@ const routes: Routes = [
   // rotas de ADM
   { path: "administracao", component: AdministracaoComponent },
   { path: "cadastrar", component: AdicionarServicoComponent },
-  { path: "editar/:id", component: EditarServicoComponent }
+  { path: "editar/:id", component: AdicionarServicoComponent }
 
 ];
 

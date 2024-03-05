@@ -5,11 +5,32 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    color: #642900;
 }
 
 table{
     border-collapse: collapse;
     width: 80%;
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 500px){
+    table{
+        display: block;
+    }
+    tbody{
+        width:100%;
+        overflow-x:auto;
+        padding: 5px;
+
+    }
+
+    th, td {
+        white-space: nowrap;
+        padding: 6px;
+        font-size: 12px;
+    }
+
 }
 th {
     text-align: left;
@@ -28,4 +49,9 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #f5f5f5;
+}
+
+.tbl-servicos button{
+    background: none;
+    border: none;
 }

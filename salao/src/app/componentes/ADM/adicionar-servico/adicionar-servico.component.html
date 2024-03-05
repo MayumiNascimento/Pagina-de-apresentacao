@@ -5,9 +5,6 @@
     <div class="Center">
 
         <form class="formStyle" enctype="multipart/form-data">
-            <!-- <label for="tipo">Tipo:</label>
-            <input type="text" id="tipo" name="tipo" [(ngModel)]="servicos.tipo">
-            <br> -->
         
             <label for="nome">Serviço <br>    
             <input type="text" 
@@ -19,7 +16,6 @@
             <br>
         <label for="tipo">Tipo <br>
             <select name="tipo" id="tipo" [(ngModel)]="servicos.tipo">
-                <option value="0" >escolha</option>
                 <option value="Unhas">Unhas</option>
                 <option value="Cabelo">Cabelo</option>
                 <option value="Depilação">Depilação</option>
@@ -51,9 +47,13 @@
         <label for="imagem">Escolha uma imagem <br>
             <input type="file" (change)="onFileSelected($event)" [(ngModel)]="servicos.imagem"> 
         </label>
+
+        <!-- <span>
+            <img *ngIf="servicos.imagem" [src]="servicos.imagem" alt="Imagem Selecionada" height="150">
+        </span> -->
         <br>
         <div class="buttons">
-            <button (click)="upload()">Cadastrar</button>
+            <button (click)="onSaveService(servicos)">Cadastrar</button>
             <button routerLink="/administracao" >Voltar</button>
         </div>
     </form>
